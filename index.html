@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
-    <!-- Preconnect для CDN -->
+    <!-- Preconnect for CDN -->
     <link rel="preconnect" href="https://static.tildacdn.ink">
     
     <!-- Favicon -->
@@ -17,23 +17,23 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
     <!-- SEO Meta Tags -->
-    <title id="page-title">Heiße Dates heute finden | C-Date Partner</title>
-    <meta id="meta-description" name="description" content="Kostenlose Anmeldung bei C-Date - Finde echte Frauen in deiner Nähe für unverbindliche Abenteuer. Verifizierte Profile, 100% diskret.">
-    <meta id="meta-keywords" name="keywords" content="Sex Dating, One Night Stand, Frauen kennenlernen, diskrete Begegnungen, Casual Dating, heute Date finden">
+    <title id="page-title">Hot Dates Today | C-Date Partner</title>
+    <meta id="meta-description" name="description" content="Free registration at C-Date - Find real women nearby for casual encounters. Verified profiles, 100% discreet.">
+    <meta id="meta-keywords" name="keywords" content="Sex Dating, One Night Stand, Meet women, discreet encounters, Casual Dating, find date today">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" id="og-url" content="https://cdatetreff.de">
-    <meta property="og:title" id="og-title" content="Heiße Dates heute finden | C-Date Partner">
-    <meta property="og:description" id="og-description" content="Kostenlose Anmeldung bei C-Date - Finde echte Frauen in deiner Nähe">
+    <meta property="og:title" id="og-title" content="Hot Dates Today | C-Date Partner">
+    <meta property="og:description" id="og-description" content="Free registration at C-Date - Find real women nearby">
     <meta property="og:image" id="og-image" content="https://static.tildacdn.ink/tild3930-6566-4838-a662-653336353531/437659768_1221373418.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" id="twitter-title" content="Heiße Dates heute finden | C-Date Partner">
-    <meta name="twitter:description" id="twitter-description" content="Kostenlose Anmeldung bei C-Date - Finde echte Frauen">
+    <meta name="twitter:title" id="twitter-title" content="Hot Dates Today | C-Date Partner">
+    <meta name="twitter:description" id="twitter-description" content="Free registration at C-Date - Find real women">
     
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -41,7 +41,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "C-Date Partner",
-        "description": "Offizieller Partner von C-Date - Finde heute noch Dates in deiner Nähe",
+        "description": "Official Partner of C-Date - Find dates nearby today",
         "url": "https://cdatetreff.de"
     }
     </script>
@@ -56,15 +56,17 @@
     <link rel="alternate" hreflang="no" href="https://cdatetreff.de/no">
     <link rel="alternate" hreflang="da" href="https://cdatetreff.de/da">
     <link rel="alternate" hreflang="pl" href="https://cdatetreff.de/pl">
+    <link rel="alternate" hreflang="en" href="https://cdatetreff.de/en">
+    <link rel="alternate" hreflang="sv" href="https://cdatetreff.de/sv">
     <link rel="alternate" hreflang="x-default" href="https://cdatetreff.de">
     
-    <!-- TRACKING SCRIPT: Сохраняем параметры из myBid в localStorage -->
+    <!-- TRACKING SCRIPT: Save URL parameters to localStorage -->
     <script>
     (function() {
-      // Сохраняем все параметры из URL
+      // Save all URL parameters
       const params = new URLSearchParams(window.location.search);
       
-      // Сохраняем s1-s5 параметры
+      // Save s1-s5 parameters
       ['s1', 's2', 's3', 's4', 's5'].forEach(param => {
         const value = params.get(param);
         if (value) {
@@ -73,13 +75,13 @@
         }
       });
       
-      // Сохраняем дополнительные параметры для аналитики
+      // Save additional parameters for analytics
       const ref = document.referrer;
       if (ref) {
         localStorage.setItem('cake_referrer', ref);
       }
       
-      // Сохраняем время входа
+      // Save landing time
       localStorage.setItem('cake_landing_time', Date.now().toString());
     })();
     </script>
@@ -144,13 +146,13 @@
             padding: 0 15px;
         }
         
-        /* Simple Logo - ИЗМЕНЕНО: без редиректа на Cake */
+        /* Simple Logo - CHANGED: no redirect to Cake */
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
             text-decoration: none;
-            cursor: default; /* Убираем курсор-ссылку */
+            cursor: default;
         }
         
         .logo-icon {
@@ -638,7 +640,7 @@
     <!-- Header -->
     <header class="header">
         <div class="container header-content">
-            <!-- ИЗМЕНЕНО: Логотип теперь НЕ кликабельный -->
+            <!-- CHANGED: Logo is NOT clickable -->
             <div class="logo">
                 <span class="logo-icon">🔥</span>
                 <span class="logo-text">C-DATE<span class="logo-partner">PARTNER</span></span>
@@ -646,7 +648,7 @@
             
             <!-- Language Selector -->
             <div class="language-selector">
-                <button class="language-btn" id="languageBtn" aria-label="Sprache auswählen" aria-expanded="false">
+                <button class="language-btn" id="languageBtn" aria-label="Select language" aria-expanded="false">
                     <span id="currentLanguage">DE</span>
                 </button>
                 <div class="language-dropdown" id="languageDropdown" role="menu">
@@ -669,46 +671,46 @@
         <section class="main-hero">
             <div class="container">
                 <h1 class="hero-title" id="hero-title">
-                    HEUTE NOCH HEIßE DATES FINDEN
+                    FIND HOT DATES TODAY
                 </h1>
                 
                 <div class="hero-subtitle" id="hero-subtitle">
-                    Verifizierte Frauen in deiner Nähe warten auf dich
+                    Verified women nearby are waiting for you
                 </div>
                 
                 <div class="hero-badge" id="hero-badge">
-                    ⚡ KOSTENLOSE ANMELDUNG
+                    ⚡ FREE REGISTRATION
                 </div>
                 
-                <!-- Main CTA - ИЗМЕНЕНО: Добавлен tracking -->
+                <!-- Main CTA - CHANGED: Added tracking -->
                 <div class="main-cta">
                     <button class="cta-button" id="main-cta-button">
-                        JETZT KOSTENLOS ANMELDEN →
+                        REGISTER FOR FREE NOW →
                     </button>
                     <div class="cta-note" id="cta-note">
-                        Keine Kreditkarte nötig • In 2 Minuten starten • 100% diskret
+                        No credit card needed • Start in 2 minutes • 100% discreet
                     </div>
                 </div>
                 
                 <!-- Benefits -->
                 <div class="benefits">
-                    <h2 class="benefits-title" id="benefits-title">WARUM C-DATE?</h2>
+                    <h2 class="benefits-title" id="benefits-title">WHY C-DATE?</h2>
                     <div class="benefits-grid">
                         <div class="benefit-item">
                             <span class="benefit-icon">👥</span>
-                            <div class="benefit-text" id="benefit1">36+ Millionen Mitglieder</div>
+                            <div class="benefit-text" id="benefit1">36+ Million members</div>
                         </div>
                         <div class="benefit-item">
                             <span class="benefit-icon">✅</span>
-                            <div class="benefit-text" id="benefit2">Verifizierte Profile</div>
+                            <div class="benefit-text" id="benefit2">Verified profiles</div>
                         </div>
                         <div class="benefit-item">
                             <span class="benefit-icon">⚡</span>
-                            <div class="benefit-text" id="benefit3">Sofortige Kontakte</div>
+                            <div class="benefit-text" id="benefit3">Instant contacts</div>
                         </div>
                         <div class="benefit-item">
                             <span class="benefit-icon">🔒</span>
-                            <div class="benefit-text" id="benefit4">100% diskret & sicher</div>
+                            <div class="benefit-text" id="benefit4">100% discreet & secure</div>
                         </div>
                     </div>
                 </div>
@@ -719,20 +721,20 @@
         <section class="gallery-section">
             <div class="container">
                 <h2 class="gallery-title" id="gallery-title">
-                    ECHTE MITGLIEDER - ECHTE TREFFEN
+                    REAL MEMBERS - REAL MEETINGS
                 </h2>
                 
                 <div class="gallery-grid" id="galleryGrid">
                     <!-- Gallery will be populated by JavaScript -->
                 </div>
                 
-                <!-- CTA after gallery - ИЗМЕНЕНО: Добавлен tracking -->
+                <!-- CTA after gallery - CHANGED: Added tracking -->
                 <div class="main-cta">
                     <button class="cta-button" id="gallery-cta-button">
-                        👉 JETZT KONTAKTE FINDEN
+                        👉 FIND CONTACTS NOW
                     </button>
                     <div class="cta-note" id="gallery-note">
-                        Diese Frauen suchen aktuell Partner in deiner Region
+                        These women are currently looking for partners in your area
                     </div>
                 </div>
             </div>
@@ -742,12 +744,12 @@
         <section class="testimonials">
             <div class="container">
                 <div class="testimonial" id="testimonial1">
-                    "Endlich eine Plattform, die funktioniert! Nach 3 Tagen hatte ich mein erstes Date."
+                    "Finally a platform that works! After 3 days I had my first date."
                 </div>
                 <div class="testimonial-author" id="testimonial-author1">- Markus, 42, Berlin</div>
                 
                 <div class="testimonial" id="testimonial2">
-                    "100% seriös und diskret. Habe hier meine jetzige Freundin kennengelernt."
+                    "100% serious and discreet. I met my current girlfriend here."
                 </div>
                 <div class="testimonial-author" id="testimonial-author2">- Thomas, 38, Hamburg</div>
             </div>
@@ -757,20 +759,20 @@
         <section class="final-cta">
             <div class="container">
                 <h2 class="final-cta-title" id="final-cta-title">
-                    WARTE NICHT LÄNGER!
+                    DON'T WAIT ANY LONGER!
                 </h2>
                 
                 <div class="timer" id="timer">
-                    🕒 Angebot gilt heute noch
+                    🕒 Offer valid today
                 </div>
                 
-                <!-- Final CTA - ИЗМЕНЕНО: Добавлен tracking -->
+                <!-- Final CTA - CHANGED: Added tracking -->
                 <div class="main-cta">
                     <button class="cta-button" id="final-cta-button">
-                        🔥 JETZT SOFORT STARTEN
+                        🔥 START NOW
                     </button>
                     <div class="cta-note" id="final-note">
-                        Kostenlose Anmeldung • Kein Abo nötig • Jederzeit kündbar
+                        Free registration • No subscription required • Cancel anytime
                     </div>
                 </div>
             </div>
@@ -781,16 +783,16 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-disclaimer" id="footer-disclaimer">
-                Offizieller Partner von C-Date. Dieser Service leitet Sie zur offiziellen C-Date Plattform weiter. Nur für Erwachsene ab 18 Jahren. Bitte nutzen Sie verantwortungsvoll.
+                Official partner of C-Date. This service redirects you to the official C-Date platform. For adults 18+ only. Please use responsibly.
                 <br><br>
-                © 2024 C-Date Partner. Alle Rechte vorbehalten.
+                © 2024 C-Date Partner. All rights reserved.
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        // Обновленные языковые конфигурации с новым контентом
+        // Updated language configurations with English and Swedish added
         const languages = {
             'de': {
                 code: 'de',
@@ -821,6 +823,68 @@
                     finalCtaButton: '🔥 JETZT SOFORT STARTEN',
                     finalNote: 'Kostenlose Anmeldung • Kein Abo nötig • Jederzeit kündbar',
                     footerDisclaimer: 'Offizieller Partner von C-Date. Dieser Service leitet Sie zur offiziellen C-Date Plattform weiter. Nur für Erwachsene ab 18 Jahren. Bitte nutzen Sie verantwortungsvoll.<br><br>© 2024 C-Date Partner. Alle Rechte vorbehalten.'
+                }
+            },
+            'en': {
+                code: 'en',
+                name: 'English',
+                shortName: 'EN',
+                content: {
+                    title: 'Hot Dates Today | C-Date Partner',
+                    description: 'Free registration at C-Date - Find real women nearby for casual encounters. Verified profiles, 100% discreet.',
+                    heroTitle: 'FIND HOT DATES TODAY',
+                    heroSubtitle: 'Verified women nearby are waiting for you',
+                    heroBadge: '⚡ FREE REGISTRATION',
+                    mainCtaButton: 'REGISTER FOR FREE NOW →',
+                    ctaNote: 'No credit card needed • Start in 2 minutes • 100% discreet',
+                    benefitsTitle: 'WHY C-DATE?',
+                    benefit1: '36+ Million members',
+                    benefit2: 'Verified profiles',
+                    benefit3: 'Instant contacts',
+                    benefit4: '100% discreet & secure',
+                    galleryTitle: 'REAL MEMBERS - REAL MEETINGS',
+                    galleryCtaButton: '👉 FIND CONTACTS NOW',
+                    galleryNote: 'These women are currently looking for partners in your area',
+                    testimonial1: '"Finally a platform that works! After 3 days I had my first date."',
+                    testimonialAuthor1: '- Markus, 42, Berlin',
+                    testimonial2: '"100% serious and discreet. I met my current girlfriend here."',
+                    testimonialAuthor2: '- Thomas, 38, Hamburg',
+                    finalCtaTitle: 'DON\'T WAIT ANY LONGER!',
+                    timer: '🕒 Offer valid today',
+                    finalCtaButton: '🔥 START NOW',
+                    finalNote: 'Free registration • No subscription required • Cancel anytime',
+                    footerDisclaimer: 'Official partner of C-Date. This service redirects you to the official C-Date platform. For adults 18+ only. Please use responsibly.<br><br>© 2024 C-Date Partner. All rights reserved.'
+                }
+            },
+            'sv': {
+                code: 'sv',
+                name: 'Svenska',
+                shortName: 'SV',
+                content: {
+                    title: 'Heta träffar idag | C-Date Partner',
+                    description: 'Gratis registrering på C-Date - Hitta riktiga kvinnor i närheten för tillfälliga möten. Verifierade profiler, 100% diskret.',
+                    heroTitle: 'HETA TRÄFFAR IDAG',
+                    heroSubtitle: 'Verifierade kvinnor i närheten väntar på dig',
+                    heroBadge: '⚡ GRATIS REGISTRERING',
+                    mainCtaButton: 'REGISTRERA DIG GRATIS NU →',
+                    ctaNote: 'Inget kreditkort behövs • Börja på 2 minuter • 100% diskret',
+                    benefitsTitle: 'VARFÖR C-DATE?',
+                    benefit1: '36+ miljoner medlemmar',
+                    benefit2: 'Verifierade profiler',
+                    benefit3: 'Omedelbara kontakter',
+                    benefit4: '100% diskret & säkert',
+                    galleryTitle: 'RIKTIGA MEDLEMMAR - RIKTIGA MÖTEN',
+                    galleryCtaButton: '👉 HITTA KONTAKTER NU',
+                    galleryNote: 'Dessa kvinnor söker för närvarande partners i ditt område',
+                    testimonial1: '"Äntligen en plattform som fungerar! Efter 3 dagar hade jag min första träff."',
+                    testimonialAuthor1: '- Markus, 42, Berlin',
+                    testimonial2: '"100% seriöst och diskret. Jag träffade min nuvarande flickvän här."',
+                    testimonialAuthor2: '- Thomas, 38, Hamburg',
+                    finalCtaTitle: 'VÄNTA INTE LÄNGRE!',
+                    timer: '🕒 Erbjudande gäller idag',
+                    finalCtaButton: '🔥 STARTA NU',
+                    finalNote: 'Gratis registrering • Ingen prenumeration krävs • Avbryt när som helst',
+                    footerDisclaimer: 'Officiell partner till C-Date. Denna tjänst omdirigerar dig till den officiella C-Date-plattformen. Endast för vuxna 18+. Använd ansvarsfullt.<br><br>© 2024 C-Date Partner. Alla rättigheter förbehållna.'
                 }
             },
             'fr': {
@@ -1075,7 +1139,7 @@
 
         let currentLang = 'de';
 
-        // ВСЕ ИЗОБРАЖЕНИЯ ИЗ ВАШЕГО ЛЕНДИНГА
+        // ALL IMAGES FROM YOUR LANDING PAGE
         const allImages = [
             "https://static.tildacdn.ink/tild3930-6566-4838-a662-653336353531/437659768_1221373418.jpg",
             "https://static.tildacdn.ink/tild3163-3361-4565-b064-613535623538/437516504_1221379354.jpg",
@@ -1108,29 +1172,29 @@
             "https://static.tildacdn.ink/tild3263-6333-4631-a362-363236343538/434843396_1221358241.jpg"
         ];
 
-        // ФУНКЦИЯ ДЛЯ РЕДИРЕКТА С ТРЕКИНГОМ
+        // FUNCTION FOR REDIRECT WITH TRACKING
         function redirectToCake() {
             try {
-                // Получаем сохраненные параметры из localStorage
+                // Get saved parameters from localStorage
                 const s1 = localStorage.getItem('cake_s1') || '';
                 const s2 = localStorage.getItem('cake_s2') || '';
                 const s3 = localStorage.getItem('cake_s3') || '';
                 const s4 = localStorage.getItem('cake_s4') || '';
                 const s5 = localStorage.getItem('cake_s5') || '';
                 
-                // Создаем ссылку с параметрами трекинга
+                // Create link with tracking parameters
                 const cakeLink = `https://inspxtrc.com/?a=16316&c=9925&s1=${encodeURIComponent(s1)}&s2=${encodeURIComponent(s2)}&s3=${encodeURIComponent(s3)}&s4=${encodeURIComponent(s4)}&s5=${encodeURIComponent(s5)}`;
                 
                 console.log('Redirecting to Cake with params:', { s1, s2, s3, s4, s5 });
                 
-                // Сохраняем время клика для аналитики
+                // Save click time for analytics
                 localStorage.setItem('cake_click_time', Date.now().toString());
                 
-                // Редирект
+                // Redirect
                 window.location.href = cakeLink;
             } catch (error) {
                 console.error('Redirect error:', error);
-                // Fallback: простая ссылка без параметров
+                // Fallback: simple link without parameters
                 window.location.href = 'https://inspxtrc.com/?a=16316&c=9925';
             }
         }
@@ -1368,7 +1432,7 @@
                     
                     item.innerHTML = `
                         <img src="${image}" 
-                             alt="Verifizierte Frau auf C-Date ${index + 1}" 
+                             alt="Verified woman on C-Date ${index + 1}" 
                              loading="lazy"
                              width="400" height="500">
                         <div class="gallery-badge">${badgeText}</div>
@@ -1426,7 +1490,7 @@
 
         // Setup tracking for CTA buttons
         function setupTracking() {
-            // Все CTA кнопки получают обработчик редиректа с трекингом
+            // All CTA buttons get redirect handler with tracking
             const ctaButtons = [
                 'main-cta-button',
                 'gallery-cta-button',
@@ -1440,7 +1504,7 @@
                 }
             });
             
-            // Логирование для отладки
+            // Logging for debugging
             console.log('Tracking setup completed');
             console.log('Saved params:', {
                 s1: localStorage.getItem('cake_s1'),
@@ -1452,12 +1516,12 @@
         }
 
         function getRandomBadgeText() {
-            const badges = ['ONLINE', 'NEU', 'AKTIV', 'SUCHT', 'VERIFIZIERT', 'POPULÄR'];
+            const badges = ['ONLINE', 'NEW', 'ACTIVE', 'LOOKING', 'VERIFIED', 'POPULAR'];
             return badges[Math.floor(Math.random() * badges.length)];
         }
 
         function getRandomLocation() {
-            const locations = ['Berlin', 'Hamburg', 'München', 'Köln', 'Frankfurt', 'Stuttgart', 'Düsseldorf', 'Dortmund', 'Essen', 'Leipzig'];
+            const locations = ['Berlin', 'Hamburg', 'Munich', 'Cologne', 'Frankfurt', 'Stuttgart', 'Düsseldorf', 'Dortmund', 'Essen', 'Leipzig'];
             return locations[Math.floor(Math.random() * locations.length)];
         }
 
@@ -1518,11 +1582,11 @@
             // Show different messages based on time
             let message = '';
             if (hours < 12) {
-                message = `🕒 Noch ${12-hours} Stunden heute`;
+                message = `🕒 Still ${12-hours} hours today`;
             } else if (hours < 18) {
-                message = `⏳ Angebot gilt heute noch`;
+                message = `⏳ Offer valid today`;
             } else {
-                message = `🔥 Heute Abend noch starten`;
+                message = `🔥 Start tonight`;
             }
             
             timerElement.textContent = message;
