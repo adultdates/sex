@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
     <!-- Preconnect for CDN -->
-    <link rel="preconnect" href="https://static.tildacdn.ink">
+    <link rel="preconnect" href="https://static.tildacdn.ink" crossorigin>
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
@@ -20,6 +20,7 @@
     <title id="page-title">Hot Dates Today | C-Date Partner</title>
     <meta id="meta-description" name="description" content="Free registration at C-Date - Find real women nearby for casual encounters. Verified profiles, 100% discreet.">
     <meta id="meta-keywords" name="keywords" content="Sex Dating, One Night Stand, Meet women, discreet encounters, Casual Dating, find date today">
+    <meta name="robots" content="index, follow">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -29,6 +30,7 @@
     <meta property="og:image" id="og-image" content="https://static.tildacdn.ink/tild3930-6566-4838-a662-653336353531/437659768_1221373418.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="de_DE">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
@@ -45,6 +47,9 @@
         "url": "https://cdatetreff.de"
     }
     </script>
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://cdatetreff.de">
     
     <!-- Language Links -->
     <link rel="alternate" hreflang="de" href="https://cdatetreff.de/de">
@@ -63,26 +68,40 @@
     <!-- TRACKING SCRIPT: Save URL parameters to localStorage -->
     <script>
     (function() {
-      // Save all URL parameters
-      const params = new URLSearchParams(window.location.search);
-      
-      // Save s1-s5 parameters
-      ['s1', 's2', 's3', 's4', 's5'].forEach(param => {
-        const value = params.get(param);
-        if (value) {
-          localStorage.setItem(`cake_${param}`, value);
-          console.log(`Saved ${param}: ${value}`);
+        // Safe storage functions with fallback
+        function saveToStorage(key, value) {
+            try {
+                localStorage.setItem(key, value);
+                return 'localStorage';
+            } catch (e) {
+                try {
+                    sessionStorage.setItem(key, value);
+                    return 'sessionStorage';
+                } catch (e2) {
+                    console.warn('Storage unavailable for:', key);
+                    return 'none';
+                }
+            }
         }
-      });
-      
-      // Save additional parameters for analytics
-      const ref = document.referrer;
-      if (ref) {
-        localStorage.setItem('cake_referrer', ref);
-      }
-      
-      // Save landing time
-      localStorage.setItem('cake_landing_time', Date.now().toString());
+        
+        // Save all URL parameters
+        const params = new URLSearchParams(window.location.search);
+        
+        // Save s1-s5 parameters
+        ['s1', 's2', 's3', 's4', 's5'].forEach(param => {
+            const value = params.get(param);
+            if (value) {
+                const storageType = saveToStorage(`cake_${param}`, value);
+                console.log(`Saved ${param}: ${value} (${storageType})`);
+            }
+        });
+        
+        // Save additional parameters for analytics
+        const ref = document.referrer;
+        if (ref) {
+            saveToStorage('cake_referrer', ref);
+        }
+        saveToStorage('cake_landing_time', Date.now().toString());
     })();
     </script>
     
@@ -273,6 +292,7 @@
             padding: 10px 0;
             animation: scrollGallery 60s linear infinite;
             will-change: transform;
+            backface-visibility: hidden;
         }
         
         @keyframes scrollGallery {
@@ -634,6 +654,22 @@
                 transform: none;
             }
         }
+        
+        /* Image loading animation */
+        .gallery-scroll-item img,
+        .gallery-item img {
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-scroll-item img.loading,
+        .gallery-item img.loading {
+            opacity: 0;
+        }
+        
+        .gallery-scroll-item img.loaded,
+        .gallery-item img.loaded {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -792,7 +828,7 @@
 
     <!-- JavaScript -->
     <script>
-        // Updated language configurations with English and Swedish added
+        // Updated language configurations with all corrections
         const languages = {
             'de': {
                 code: 'de',
@@ -846,9 +882,9 @@
                     galleryCtaButton: '👉 FIND CONTACTS NOW',
                     galleryNote: 'These women are currently looking for partners in your area',
                     testimonial1: '"Finally a platform that works! After 3 days I had my first date."',
-                    testimonialAuthor1: '- Markus, 42, Berlin',
+                    testimonialAuthor1: '- Mark, 42, London',
                     testimonial2: '"100% serious and discreet. I met my current girlfriend here."',
-                    testimonialAuthor2: '- Thomas, 38, Hamburg',
+                    testimonialAuthor2: '- Thomas, 38, New York',
                     finalCtaTitle: 'DON\'T WAIT ANY LONGER!',
                     timer: '🕒 Offer valid today',
                     finalCtaButton: '🔥 START NOW',
@@ -877,9 +913,9 @@
                     galleryCtaButton: '👉 HITTA KONTAKTER NU',
                     galleryNote: 'Dessa kvinnor söker för närvarande partners i ditt område',
                     testimonial1: '"Äntligen en plattform som fungerar! Efter 3 dagar hade jag min första träff."',
-                    testimonialAuthor1: '- Markus, 42, Berlin',
+                    testimonialAuthor1: '- Markus, 42, Stockholm',
                     testimonial2: '"100% seriöst och diskret. Jag träffade min nuvarande flickvän här."',
-                    testimonialAuthor2: '- Thomas, 38, Hamburg',
+                    testimonialAuthor2: '- Thomas, 38, Göteborg',
                     finalCtaTitle: 'VÄNTA INTE LÄNGRE!',
                     timer: '🕒 Erbjudande gäller idag',
                     finalCtaButton: '🔥 STARTA NU',
@@ -967,7 +1003,7 @@
                     benefit3: 'Contactos inmediatos',
                     benefit4: '100% discreto & seguro',
                     galleryTitle: 'MIEMBROS REALES - CITAS REALES',
-                    galleryCtaButton: '👉 ENCONTRAR CONTACTS AHORA',
+                    galleryCtaButton: '👉 ENCONTRAR CONTACTOS AHORA',
                     galleryNote: 'Estas mujeres buscan actualmente parejas en tu región',
                     testimonial1: '"¡Finalmente una plataforma que funciona! Después de 3 días tuve mi primera cita."',
                     testimonialAuthor1: '- Marcos, 42, Madrid',
@@ -1096,7 +1132,7 @@
                     testimonial1: '"Endelig en platform, der fungerer! Efter 3 dage havde jeg mit første møde."',
                     testimonialAuthor1: '- Markus, 42, København',
                     testimonial2: '"100% seriøst og diskret. Jeg mødte min nuværende kæreste her."',
-                    testimonialAuthor2: '- Thomas, 38, Århus',
+                    testimonialAuthor2: '- Thomas, 38, Aarhus',
                     finalCtaTitle: 'VENT IKKE LÆNGERE!',
                     timer: '🕒 Tilbud gælder i dag',
                     finalCtaButton: '🔥 START NU',
@@ -1172,15 +1208,58 @@
             "https://static.tildacdn.ink/tild3263-6333-4631-a362-363236343538/434843396_1221358241.jpg"
         ];
 
+        // Localized location lists for each language
+        const locationLists = {
+            'de': ['Berlin', 'Hamburg', 'München', 'Köln', 'Frankfurt', 'Stuttgart', 'Düsseldorf', 'Dortmund', 'Essen', 'Leipzig'],
+            'en': ['London', 'New York', 'Berlin', 'Paris', 'Amsterdam', 'Madrid', 'Rome', 'Barcelona', 'Vienna', 'Prague'],
+            'sv': ['Stockholm', 'Göteborg', 'Malmö', 'Uppsala', 'Linköping', 'Örebro', 'Västerås', 'Helsingborg', 'Jönköping', 'Norrköping'],
+            'fr': ['Paris', 'Lyon', 'Marseille', 'Toulouse', 'Nice', 'Nantes', 'Strasbourg', 'Montpellier', 'Bordeaux', 'Lille'],
+            'it': ['Roma', 'Milano', 'Napoli', 'Torino', 'Palermo', 'Genova', 'Bologna', 'Firenze', 'Bari', 'Catania'],
+            'es': ['Madrid', 'Barcelona', 'Valencia', 'Sevilla', 'Zaragoza', 'Málaga', 'Murcia', 'Palma', 'Las Palmas', 'Bilbao'],
+            'nl': ['Amsterdam', 'Rotterdam', 'Den Haag', 'Utrecht', 'Eindhoven', 'Groningen', 'Tilburg', 'Almere', 'Breda', 'Nijmegen'],
+            'pt': ['Lisboa', 'Porto', 'Braga', 'Coimbra', 'Faro', 'Aveiro', 'Leiria', 'Évora', 'Viseu', 'Funchal'],
+            'no': ['Oslo', 'Bergen', 'Stavanger', 'Trondheim', 'Drammen', 'Fredrikstad', 'Kristiansand', 'Tromsø', 'Sandnes', 'Sarpsborg'],
+            'da': ['København', 'Aarhus', 'Odense', 'Aalborg', 'Esbjerg', 'Randers', 'Kolding', 'Horsens', 'Vejle', 'Roskilde'],
+            'pl': ['Warszawa', 'Kraków', 'Łódź', 'Wrocław', 'Poznań', 'Gdańsk', 'Szczecin', 'Bydgoszcz', 'Lublin', 'Katowice']
+        };
+
+        // Safe storage functions with fallback
+        function saveToStorage(key, value) {
+            try {
+                localStorage.setItem(key, value);
+                return 'localStorage';
+            } catch (e) {
+                try {
+                    sessionStorage.setItem(key, value);
+                    return 'sessionStorage';
+                } catch (e2) {
+                    console.warn('Storage unavailable for:', key);
+                    return 'none';
+                }
+            }
+        }
+
+        function getFromStorage(key) {
+            try {
+                return localStorage.getItem(key);
+            } catch (e) {
+                try {
+                    return sessionStorage.getItem(key);
+                } catch (e2) {
+                    return null;
+                }
+            }
+        }
+
         // FUNCTION FOR REDIRECT WITH TRACKING
         function redirectToCake() {
             try {
-                // Get saved parameters from localStorage
-                const s1 = localStorage.getItem('cake_s1') || '';
-                const s2 = localStorage.getItem('cake_s2') || '';
-                const s3 = localStorage.getItem('cake_s3') || '';
-                const s4 = localStorage.getItem('cake_s4') || '';
-                const s5 = localStorage.getItem('cake_s5') || '';
+                // Get saved parameters from storage
+                const s1 = getFromStorage('cake_s1') || '';
+                const s2 = getFromStorage('cake_s2') || '';
+                const s3 = getFromStorage('cake_s3') || '';
+                const s4 = getFromStorage('cake_s4') || '';
+                const s5 = getFromStorage('cake_s5') || '';
                 
                 // Create link with tracking parameters
                 const cakeLink = `https://inspxtrc.com/?a=16316&c=9925&s1=${encodeURIComponent(s1)}&s2=${encodeURIComponent(s2)}&s3=${encodeURIComponent(s3)}&s4=${encodeURIComponent(s4)}&s5=${encodeURIComponent(s5)}`;
@@ -1188,20 +1267,48 @@
                 console.log('Redirecting to Cake with params:', { s1, s2, s3, s4, s5 });
                 
                 // Save click time for analytics
-                localStorage.setItem('cake_click_time', Date.now().toString());
+                saveToStorage('cake_click_time', Date.now().toString());
+                
+                // Track click event
+                trackEvent('cta_click', { source: 'button_click', lang: currentLang });
                 
                 // Redirect
                 window.location.href = cakeLink;
             } catch (error) {
                 console.error('Redirect error:', error);
+                trackEvent('redirect_error', { error: error.message });
                 // Fallback: simple link without parameters
                 window.location.href = 'https://inspxtrc.com/?a=16316&c=9925';
+            }
+        }
+
+        // Track events
+        function trackEvent(eventName, data = {}) {
+            try {
+                const eventData = {
+                    event: eventName,
+                    timestamp: Date.now(),
+                    lang: currentLang,
+                    url: window.location.href,
+                    ...data
+                };
+                console.log('Event tracked:', eventData);
+                
+                // Save to storage for later analysis
+                const events = JSON.parse(getFromStorage('cake_events') || '[]');
+                events.push(eventData);
+                if (events.length > 100) events.shift(); // Keep only last 100 events
+                saveToStorage('cake_events', JSON.stringify(events));
+            } catch (e) {
+                console.warn('Event tracking failed:', e);
             }
         }
 
         // Initialize everything
         function init() {
             try {
+                trackEvent('page_load');
+                
                 // Detect language
                 const browserLang = navigator.language.split('-')[0];
                 const urlParams = new URLSearchParams(window.location.search);
@@ -1213,8 +1320,13 @@
                 
                 if (langParam && languages[langParam]) {
                     currentLang = langParam;
+                    trackEvent('language_from_url', { lang: langParam });
                 } else if (supportedLangs.includes(browserLangNormalized)) {
                     currentLang = browserLangNormalized;
+                    trackEvent('language_from_browser', { lang: browserLangNormalized });
+                } else {
+                    currentLang = 'de';
+                    trackEvent('language_default', { lang: 'de' });
                 }
                 
                 // Initialize language system
@@ -1233,8 +1345,12 @@
                 // Setup tracking for CTA buttons
                 setupTracking();
                 
+                // Setup gallery interactions
+                setupGalleryInteractions();
+                
             } catch (error) {
                 console.error('Initialization error:', error);
+                trackEvent('init_error', { error: error.message });
                 currentLang = 'de';
                 updateContent('de');
             }
@@ -1265,6 +1381,7 @@
                     `;
                     option.addEventListener('click', (e) => {
                         e.preventDefault();
+                        trackEvent('language_change', { from: currentLang, to: lang.code });
                         changeLanguage(lang.code);
                     });
                     
@@ -1294,6 +1411,7 @@
                     e.stopPropagation();
                     const isExpanded = languageDropdown.classList.toggle('show');
                     languageBtn.setAttribute('aria-expanded', isExpanded);
+                    trackEvent('language_dropdown_toggle', { expanded: isExpanded });
                 });
                 
                 document.addEventListener('click', (e) => {
@@ -1305,6 +1423,7 @@
                 
             } catch (error) {
                 console.error('Language system error:', error);
+                trackEvent('language_system_error', { error: error.message });
             }
         }
 
@@ -1341,6 +1460,9 @@
                 languageDropdown.classList.remove('show');
                 document.getElementById('languageBtn').setAttribute('aria-expanded', 'false');
             }
+            
+            // Update timer with new language
+            updateTimer();
         }
 
         function updateContent(langCode) {
@@ -1407,6 +1529,19 @@
             
             // Update HTML lang attribute
             document.documentElement.lang = langCode;
+            document.documentElement.dir = langCode === 'ar' ? 'rtl' : 'ltr';
+        }
+
+        // Get random location based on current language
+        function getRandomLocation() {
+            const locations = locationLists[currentLang] || locationLists['en'];
+            return locations[Math.floor(Math.random() * locations.length)];
+        }
+
+        // Get random badge text
+        function getRandomBadgeText() {
+            const badges = ['ONLINE', 'NEW', 'ACTIVE', 'LOOKING', 'VERIFIED', 'POPULAR'];
+            return badges[Math.floor(Math.random() * badges.length)];
         }
 
         // Initialize HERO gallery (scroll gallery at top)
@@ -1429,26 +1564,49 @@
                     
                     const badgeText = getRandomBadgeText();
                     const location = getRandomLocation();
+                    const altText = languages[currentLang].content.galleryTitle 
+                        ? `${languages[currentLang].content.galleryTitle} - ${location}`
+                        : `Verified woman on C-Date in ${location}`;
                     
                     item.innerHTML = `
                         <img src="${image}" 
-                             alt="Verified woman on C-Date ${index + 1}" 
+                             alt="${altText}" 
                              loading="lazy"
-                             width="400" height="500">
+                             width="400" height="500"
+                             class="loading">
                         <div class="gallery-badge">${badgeText}</div>
                         <div class="gallery-overlay">
                             <div class="gallery-text">${location}</div>
                         </div>
                     `;
                     
+                    // Load image with error handling
+                    const img = item.querySelector('img');
+                    img.addEventListener('load', function() {
+                        this.classList.remove('loading');
+                        this.classList.add('loaded');
+                    });
+                    
+                    img.addEventListener('error', function() {
+                        console.warn('Failed to load image:', image);
+                        this.classList.remove('loading');
+                        this.classList.add('loaded');
+                        this.alt = 'Image not available';
+                        this.style.backgroundColor = '#f0f0f0';
+                    });
+                    
                     // Make image clickable - leads to registration WITH TRACKING
-                    item.addEventListener('click', redirectToCake);
+                    item.addEventListener('click', function() {
+                        trackEvent('gallery_click', { type: 'hero', index: index % 8 });
+                        redirectToCake();
+                    });
                     
                     heroGallery.appendChild(item);
                 });
                 
             } catch (error) {
                 console.error('Hero gallery error:', error);
+                trackEvent('gallery_error', { type: 'hero', error: error.message });
             }
         }
 
@@ -1468,23 +1626,46 @@
                     item.className = 'gallery-item';
                     
                     const badgeText = getRandomBadgeText();
+                    const altText = languages[currentLang].content.galleryTitle 
+                        ? `${languages[currentLang].content.galleryTitle} ${index + 1}`
+                        : `C-Date member ${index + 1}`;
                     
                     item.innerHTML = `
                         <img src="${image}" 
-                             alt="${languages[currentLang].content.galleryTitle} ${index + 1}" 
+                             alt="${altText}" 
                              loading="lazy"
-                             width="400" height="500">
+                             width="400" height="500"
+                             class="loading">
                         <div class="gallery-item-badge">${badgeText}</div>
                     `;
                     
+                    // Load image with error handling
+                    const img = item.querySelector('img');
+                    img.addEventListener('load', function() {
+                        this.classList.remove('loading');
+                        this.classList.add('loaded');
+                    });
+                    
+                    img.addEventListener('error', function() {
+                        console.warn('Failed to load image:', image);
+                        this.classList.remove('loading');
+                        this.classList.add('loaded');
+                        this.alt = 'Image not available';
+                        this.style.backgroundColor = '#f0f0f0';
+                    });
+                    
                     // Make image clickable - leads to registration WITH TRACKING
-                    item.addEventListener('click', redirectToCake);
+                    item.addEventListener('click', function() {
+                        trackEvent('gallery_click', { type: 'main', index: index });
+                        redirectToCake();
+                    });
                     
                     galleryGrid.appendChild(item);
                 });
                 
             } catch (error) {
                 console.error('Main gallery error:', error);
+                trackEvent('gallery_error', { type: 'main', error: error.message });
             }
         }
 
@@ -1492,37 +1673,22 @@
         function setupTracking() {
             // All CTA buttons get redirect handler with tracking
             const ctaButtons = [
-                'main-cta-button',
-                'gallery-cta-button',
-                'final-cta-button'
+                { id: 'main-cta-button', type: 'main' },
+                { id: 'gallery-cta-button', type: 'gallery' },
+                { id: 'final-cta-button', type: 'final' }
             ];
             
-            ctaButtons.forEach(buttonId => {
-                const button = document.getElementById(buttonId);
+            ctaButtons.forEach(buttonConfig => {
+                const button = document.getElementById(buttonConfig.id);
                 if (button) {
-                    button.addEventListener('click', redirectToCake);
+                    button.addEventListener('click', function() {
+                        trackEvent('cta_click', { source: buttonConfig.type });
+                        redirectToCake();
+                    });
                 }
             });
             
-            // Logging for debugging
-            console.log('Tracking setup completed');
-            console.log('Saved params:', {
-                s1: localStorage.getItem('cake_s1'),
-                s2: localStorage.getItem('cake_s2'),
-                s3: localStorage.getItem('cake_s3'),
-                s4: localStorage.getItem('cake_s4'),
-                s5: localStorage.getItem('cake_s5')
-            });
-        }
-
-        function getRandomBadgeText() {
-            const badges = ['ONLINE', 'NEW', 'ACTIVE', 'LOOKING', 'VERIFIED', 'POPULAR'];
-            return badges[Math.floor(Math.random() * badges.length)];
-        }
-
-        function getRandomLocation() {
-            const locations = ['Berlin', 'Hamburg', 'Munich', 'Cologne', 'Frankfurt', 'Stuttgart', 'Düsseldorf', 'Dortmund', 'Essen', 'Leipzig'];
-            return locations[Math.floor(Math.random() * locations.length)];
+            trackEvent('tracking_setup_complete');
         }
 
         function addMobileOptimizations() {
@@ -1532,7 +1698,9 @@
                 const now = Date.now();
                 if (now - lastTouchEnd <= 300 && 
                     (event.target.tagName === 'BUTTON' || 
-                     event.target.tagName === 'A')) {
+                     event.target.tagName === 'A' ||
+                     event.target.closest('.gallery-scroll-item') ||
+                     event.target.closest('.gallery-item'))) {
                     event.preventDefault();
                 }
                 lastTouchEnd = now;
@@ -1559,6 +1727,8 @@
                     this.style.transform = '';
                 });
             });
+            
+            trackEvent('mobile_optimizations_applied');
         }
 
         // Handle browser navigation
@@ -1566,37 +1736,77 @@
             const urlParams = new URLSearchParams(window.location.search);
             const langParam = urlParams.get('lang');
             if (langParam && languages[langParam] && langParam !== currentLang) {
+                trackEvent('browser_navigation', { action: 'popstate', lang: langParam });
                 changeLanguage(langParam);
             }
         });
 
-        // Add timer animation
+        // CORRECTED: Fixed timer function
         function updateTimer() {
             const timerElement = document.getElementById('timer');
             if (!timerElement) return;
             
             const now = new Date();
             const hours = now.getHours();
-            const minutes = now.getMinutes();
             
-            // Show different messages based on time
+            // Используем готовый текст из языкового файла, если он есть
+            const lang = languages[currentLang];
+            if (!lang) return;
+            
+            // Если есть готовый текст таймера, используем его для времени 12-18
+            if (lang.content.timer && hours >= 12 && hours < 18) {
+                timerElement.textContent = lang.content.timer;
+                return;
+            }
+            
+            // Динамические сообщения
             let message = '';
+            
             if (hours < 12) {
-                message = `🕒 Still ${12-hours} hours today`;
+                const nextHour = hours + 1;
+                const timeString = `${nextHour}:00`;
+                
+                switch(currentLang) {
+                    case 'de': message = `🕒 Noch bis ${timeString} Uhr`; break;
+                    case 'fr': message = `🕒 Jusqu'à ${timeString}`; break;
+                    case 'es': message = `🕒 Hasta las ${timeString}`; break;
+                    case 'it': message = `🕒 Fino alle ${timeString}`; break;
+                    case 'nl': message = `🕒 Tot ${timeString} uur`; break;
+                    case 'pt': message = `🕒 Até às ${timeString}`; break;
+                    case 'no': message = `🕒 Frem til ${timeString}`; break;
+                    case 'da': message = `🕒 Indtil ${timeString}`; break;
+                    case 'sv': message = `🕒 Fram till ${timeString}`; break;
+                    case 'pl': message = `🕒 Do godziny ${timeString}`; break;
+                    default: message = `🕒 Until ${timeString}`;
+                }
             } else if (hours < 18) {
-                message = `⏳ Offer valid today`;
+                // Используем текст из языкового файла
+                message = lang.content.timer || '🕒 Offer valid today';
             } else {
-                message = `🔥 Start tonight`;
+                switch(currentLang) {
+                    case 'de': message = `🔥 Starte noch heute`; break;
+                    case 'fr': message = `🔥 Commencez dès ce soir`; break;
+                    case 'es': message = `🔥 Comienza esta noche`; break;
+                    case 'it': message = `🔥 Inizia stasera`; break;
+                    case 'nl': message = `🔥 Begin vanavond`; break;
+                    case 'pt': message = `🔥 Comece esta noite`; break;
+                    case 'no': message = `🔥 Start i kveld`; break;
+                    case 'da': message = `🔥 Start i aften`; break;
+                    case 'sv': message = `🔥 Börja ikväll`; break;
+                    case 'pl': message = `🔥 Zacznij dziś wieczorem`; break;
+                    default: message = `🔥 Start tonight`;
+                }
             }
             
             timerElement.textContent = message;
         }
 
-        // Pause hero gallery animation on hover/touch
+        // IMPROVED: Gallery interactions
         function setupGalleryInteractions() {
             const heroGallery = document.querySelector('.gallery-scroll-container');
             if (!heroGallery) return;
             
+            // For desktops
             heroGallery.addEventListener('mouseenter', () => {
                 heroGallery.style.animationPlayState = 'paused';
             });
@@ -1605,15 +1815,32 @@
                 heroGallery.style.animationPlayState = 'running';
             });
             
-            // For touch devices
+            // For mobile devices
+            let touchTimeout;
             heroGallery.addEventListener('touchstart', () => {
                 heroGallery.style.animationPlayState = 'paused';
+                clearTimeout(touchTimeout);
+                trackEvent('gallery_interaction', { action: 'pause' });
             });
             
             heroGallery.addEventListener('touchend', () => {
-                setTimeout(() => {
+                touchTimeout = setTimeout(() => {
                     heroGallery.style.animationPlayState = 'running';
-                }, 2000);
+                }, 3000); // Give more time on mobile
+            });
+            
+            // Resume animation on scroll
+            window.addEventListener('scroll', () => {
+                heroGallery.style.animationPlayState = 'running';
+                clearTimeout(touchTimeout);
+            });
+        }
+
+        // Preload images function
+        function preloadImages(urls) {
+            urls.forEach(url => {
+                const img = new Image();
+                img.src = url;
             });
         }
 
@@ -1622,7 +1849,6 @@
             init();
             updateTimer();
             setInterval(updateTimer, 60000); // Update every minute
-            setupGalleryInteractions();
             
             // Randomize badges every 10 seconds for dynamic look
             setInterval(() => {
@@ -1633,7 +1859,36 @@
                     badge.textContent = getRandomBadgeText();
                 });
             }, 10000);
+            
+            // Preload critical images
+            preloadImages(allImages.slice(0, 4));
+            
+            // Handle image loading errors globally
+            document.addEventListener('error', function(e) {
+                if (e.target.tagName === 'IMG') {
+                    console.warn('Image failed to load:', e.target.src);
+                    e.target.style.opacity = '0.5';
+                    e.target.style.backgroundColor = '#f0f0f0';
+                }
+            }, true);
         });
+
+        // Expose some functions for debugging if needed
+        window.debugCake = {
+            getParams: function() {
+                return {
+                    s1: getFromStorage('cake_s1'),
+                    s2: getFromStorage('cake_s2'),
+                    s3: getFromStorage('cake_s3'),
+                    s4: getFromStorage('cake_s4'),
+                    s5: getFromStorage('cake_s5'),
+                    referrer: getFromStorage('cake_referrer'),
+                    lang: currentLang
+                };
+            },
+            changeLanguage: changeLanguage,
+            currentLang: function() { return currentLang; }
+        };
 
     </script>
 </body>
