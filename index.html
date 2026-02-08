@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
-    <!-- Preconnect for CDN -->
+    <!-- Preconnect to CDN for performance -->
     <link rel="preconnect" href="https://static.tildacdn.ink" crossorigin>
     
-    <!-- Favicon -->
+    <!-- Favicon using emoji -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
     
-    <!-- Mobile Meta Tags -->
+    <!-- Mobile specific meta tags -->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
-    <!-- SEO Meta Tags -->
+    <!-- SEO metadata -->
     <title id="page-title">Hot Dates Today | C-Date Partner</title>
     <meta id="meta-description" name="description" content="Free registration at C-Date - Find real women nearby for casual encounters. Verified profiles, 100% discreet.">
     <meta id="meta-keywords" name="keywords" content="Sex Dating, One Night Stand, Meet women, discreet encounters, Casual Dating, find date today">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph -->
+    <!-- Open Graph for social sharing -->
     <meta property="og:type" content="website">
     <meta property="og:url" id="og-url" content="https://cdatetreff.de">
     <meta property="og:title" id="og-title" content="Hot Dates Today | C-Date Partner">
@@ -32,12 +32,12 @@
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="de_DE">
     
-    <!-- Twitter Cards -->
+    <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" id="twitter-title" content="Hot Dates Today | C-Date Partner">
     <meta name="twitter:description" id="twitter-description" content="Free registration at C-Date - Find real women">
     
-    <!-- Schema.org -->
+    <!-- Structured data for search engines -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -48,10 +48,10 @@
     }
     </script>
     
-    <!-- Canonical -->
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://cdatetreff.de">
     
-    <!-- Language Links -->
+    <!-- Language alternate versions -->
     <link rel="alternate" hreflang="de" href="https://cdatetreff.de/de">
     <link rel="alternate" hreflang="fr" href="https://cdatetreff.de/fr">
     <link rel="alternate" hreflang="it" href="https://cdatetreff.de/it">
@@ -65,10 +65,10 @@
     <link rel="alternate" hreflang="sv" href="https://cdatetreff.de/sv">
     <link rel="alternate" hreflang="x-default" href="https://cdatetreff.de">
     
-    <!-- TRACKING SCRIPT: Save URL parameters to localStorage -->
+    <!-- Tracking script: Save URL parameters -->
     <script>
     (function() {
-        // Safe storage functions with fallback
+        // Safe storage implementation with fallbacks
         function saveToStorage(key, value) {
             try {
                 localStorage.setItem(key, value);
@@ -84,10 +84,10 @@
             }
         }
         
-        // Save all URL parameters
+        // Extract and store all URL parameters
         const params = new URLSearchParams(window.location.search);
         
-        // Save s1-s5 parameters
+        // Store s1-s5 tracking parameters
         ['s1', 's2', 's3', 's4', 's5'].forEach(param => {
             const value = params.get(param);
             if (value) {
@@ -96,7 +96,7 @@
             }
         });
         
-        // Save additional parameters for analytics
+        // Store additional analytics data
         const ref = document.referrer;
         if (ref) {
             saveToStorage('cake_referrer', ref);
@@ -106,7 +106,7 @@
     </script>
     
     <style>
-        /* Reset & Base - Mobile First */
+        /* CSS Reset & Base Styles - Mobile First Approach */
         * {
             margin: 0;
             padding: 0;
@@ -144,7 +144,7 @@
             padding: 0 15px;
         }
         
-        /* Header - Mobile Optimized */
+        /* Header Styles - Mobile Optimized */
         .header {
             background: rgba(0, 0, 0, 0.9);
             backdrop-filter: blur(10px);
@@ -165,7 +165,7 @@
             padding: 0 15px;
         }
         
-        /* Simple Logo - CHANGED: no redirect to Cake */
+        /* Logo styling - NOTE: No redirect to Cake */
         .logo {
             display: flex;
             align-items: center;
@@ -201,7 +201,7 @@
             margin-left: 5px;
         }
         
-        /* Modern Language Selector */
+        /* Modern Language Selector Component */
         .language-selector {
             position: relative;
             z-index: 1001;
@@ -277,7 +277,7 @@
             padding-left: 25px;
         }
         
-        /* HERO IMAGE GALLERY */
+        /* Hero Image Gallery - Infinite Scrolling */
         .hero-gallery {
             margin-top: 70px;
             padding: 20px 0;
@@ -417,7 +417,7 @@
             50% { transform: translateY(-10px); }
         }
         
-        /* Main CTA Button */
+        /* Primary Call to Action Button */
         .main-cta {
             margin: 40px 0;
         }
@@ -500,7 +500,7 @@
             font-weight: 600;
         }
         
-        /* Gallery Section - Simplified */
+        /* Gallery Section */
         .gallery-section {
             padding: 40px 0;
         }
@@ -551,7 +551,7 @@
             font-weight: 600;
         }
         
-        /* Testimonials */
+        /* Testimonials Section */
         .testimonials {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
@@ -576,7 +576,7 @@
             font-size: 16px;
         }
         
-        /* Final CTA */
+        /* Final Call to Action Section */
         .final-cta {
             text-align: center;
             padding: 60px 0;
@@ -602,7 +602,7 @@
             border: 2px solid #FF5555;
         }
         
-        /* Footer */
+        /* Footer Styles */
         .footer {
             background: rgba(0, 0, 0, 0.8);
             color: rgba(255, 255, 255, 0.7);
@@ -618,7 +618,7 @@
             padding: 0 20px;
         }
         
-        /* Mobile Optimizations */
+        /* Mobile-specific optimizations */
         @media (max-width: 767px) {
             .hero-title {
                 font-size: 28px;
@@ -645,7 +645,7 @@
             }
         }
         
-        /* Fix for mobile hover */
+        /* Fix hover effects on touch devices */
         @media (hover: none) and (pointer: coarse) {
             .cta-button:hover,
             .language-btn:hover,
@@ -655,7 +655,7 @@
             }
         }
         
-        /* Image loading animation */
+        /* Image loading states */
         .gallery-scroll-item img,
         .gallery-item img {
             transition: opacity 0.3s ease;
@@ -673,37 +673,37 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Site Header -->
     <header class="header">
         <div class="container header-content">
-            <!-- CHANGED: Logo is NOT clickable -->
+            <!-- NOTE: Logo is not clickable -->
             <div class="logo">
                 <span class="logo-icon">🔥</span>
                 <span class="logo-text">C-DATE<span class="logo-partner">PARTNER</span></span>
             </div>
             
-            <!-- Language Selector -->
+            <!-- Language Selection Component -->
             <div class="language-selector">
                 <button class="language-btn" id="languageBtn" aria-label="Select language" aria-expanded="false">
                     <span id="currentLanguage">DE</span>
                 </button>
                 <div class="language-dropdown" id="languageDropdown" role="menu">
-                    <!-- Options will be populated by JavaScript -->
+                    <!-- Options populated dynamically -->
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- HERO IMAGE GALLERY -->
+    <!-- Hero Image Gallery Section -->
     <section class="hero-gallery">
         <div class="gallery-scroll-container" id="heroGallery">
-            <!-- Images will be populated by JavaScript -->
+            <!-- Images populated dynamically -->
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- Main Content Area -->
     <main>
-        <!-- Main Hero Section -->
+        <!-- Primary Hero Section -->
         <section class="main-hero">
             <div class="container">
                 <h1 class="hero-title" id="hero-title">
@@ -718,7 +718,7 @@
                     ⚡ FREE REGISTRATION
                 </div>
                 
-                <!-- Main CTA - CHANGED: Added tracking -->
+                <!-- Primary CTA - Includes tracking -->
                 <div class="main-cta">
                     <button class="cta-button" id="main-cta-button">
                         REGISTER FOR FREE NOW →
@@ -728,7 +728,7 @@
                     </div>
                 </div>
                 
-                <!-- Benefits -->
+                <!-- Benefits Grid -->
                 <div class="benefits">
                     <h2 class="benefits-title" id="benefits-title">WHY C-DATE?</h2>
                     <div class="benefits-grid">
@@ -753,7 +753,7 @@
             </div>
         </section>
 
-        <!-- Gallery -->
+        <!-- Image Gallery Section -->
         <section class="gallery-section">
             <div class="container">
                 <h2 class="gallery-title" id="gallery-title">
@@ -761,10 +761,10 @@
                 </h2>
                 
                 <div class="gallery-grid" id="galleryGrid">
-                    <!-- Gallery will be populated by JavaScript -->
+                    <!-- Gallery populated dynamically -->
                 </div>
                 
-                <!-- CTA after gallery - CHANGED: Added tracking -->
+                <!-- Secondary CTA - Includes tracking -->
                 <div class="main-cta">
                     <button class="cta-button" id="gallery-cta-button">
                         👉 FIND CONTACTS NOW
@@ -776,7 +776,7 @@
             </div>
         </section>
 
-        <!-- Testimonials -->
+        <!-- User Testimonials -->
         <section class="testimonials">
             <div class="container">
                 <div class="testimonial" id="testimonial1">
@@ -791,7 +791,7 @@
             </div>
         </section>
 
-        <!-- Final CTA -->
+        <!-- Final Call to Action Section -->
         <section class="final-cta">
             <div class="container">
                 <h2 class="final-cta-title" id="final-cta-title">
@@ -802,7 +802,7 @@
                     🕒 Offer valid today
                 </div>
                 
-                <!-- Final CTA - CHANGED: Added tracking -->
+                <!-- Final CTA - Includes tracking -->
                 <div class="main-cta">
                     <button class="cta-button" id="final-cta-button">
                         🔥 START NOW
@@ -815,7 +815,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Site Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-disclaimer" id="footer-disclaimer">
@@ -826,14 +826,22 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Application JavaScript -->
     <script>
-        // Updated language configurations with all corrections
+        // Language configuration with badge translations
         const languages = {
             'de': {
                 code: 'de',
                 name: 'Deutsch',
                 shortName: 'DE',
+                badges: {
+                    online: 'ONLINE',
+                    popular: 'POPULÄR',
+                    active: 'AKTIV',
+                    new: 'NEU',
+                    looking: 'SUCHT',
+                    verified: 'VERIFIZIERT'
+                },
                 content: {
                     title: 'Heiße Dates heute finden | C-Date Partner',
                     description: 'Kostenlose Anmeldung bei C-Date - Finde echte Frauen in deiner Nähe für unverbindliche Abenteuer. Verifizierte Profile, 100% diskret.',
@@ -865,6 +873,14 @@
                 code: 'en',
                 name: 'English',
                 shortName: 'EN',
+                badges: {
+                    online: 'ONLINE',
+                    popular: 'POPULAR',
+                    active: 'ACTIVE',
+                    new: 'NEW',
+                    looking: 'LOOKING',
+                    verified: 'VERIFIED'
+                },
                 content: {
                     title: 'Hot Dates Today | C-Date Partner',
                     description: 'Free registration at C-Date - Find real women nearby for casual encounters. Verified profiles, 100% discreet.',
@@ -896,6 +912,14 @@
                 code: 'sv',
                 name: 'Svenska',
                 shortName: 'SV',
+                badges: {
+                    online: 'ONLINE',
+                    popular: 'POPULÄR',
+                    active: 'AKTIV',
+                    new: 'NY',
+                    looking: 'SÖKER',
+                    verified: 'VERIFIERAD'
+                },
                 content: {
                     title: 'Heta träffar idag | C-Date Partner',
                     description: 'Gratis registrering på C-Date - Hitta riktiga kvinnor i närheten för tillfälliga möten. Verifierade profiler, 100% diskret.',
@@ -927,6 +951,14 @@
                 code: 'fr',
                 name: 'Français',
                 shortName: 'FR',
+                badges: {
+                    online: 'EN LIGNE',
+                    popular: 'POPULAIRE',
+                    active: 'ACTIF',
+                    new: 'NOUVEAU',
+                    looking: 'CHERCHE',
+                    verified: 'VÉRIFIÉ'
+                },
                 content: {
                     title: 'Trouvez des rencontres chaudes aujourd\'hui | Partenaire C-Date',
                     description: 'Inscription gratuite sur C-Date - Trouvez de vraies femmes près de chez vous pour des aventures sans engagement. Profils vérifiés, 100% discret.',
@@ -958,6 +990,14 @@
                 code: 'it',
                 name: 'Italiano',
                 shortName: 'IT',
+                badges: {
+                    online: 'ONLINE',
+                    popular: 'POPOLARE',
+                    active: 'ATTIVO',
+                    new: 'NUOVO',
+                    looking: 'CERCA',
+                    verified: 'VERIFICATO'
+                },
                 content: {
                     title: 'Trova incontri hot oggi | Partner C-Date',
                     description: 'Registrazione gratuita su C-Date - Trova donne vere vicino a te per avventure senza impegno. Profili verificati, 100% discreto.',
@@ -989,6 +1029,14 @@
                 code: 'es',
                 name: 'Español',
                 shortName: 'ES',
+                badges: {
+                    online: 'EN LÍNEA',
+                    popular: 'POPULAR',
+                    active: 'ACTIVO',
+                    new: 'NUEVO',
+                    looking: 'BUSCA',
+                    verified: 'VERIFICADO'
+                },
                 content: {
                     title: 'Encuentra citas calientes hoy | Socio C-Date',
                     description: 'Registro gratis en C-Date - Encuentra mujeres reales cerca de ti para aventuras sin compromiso. Perfiles verificados, 100% discreto.',
@@ -1005,7 +1053,7 @@
                     galleryTitle: 'MIEMBROS REALES - CITAS REALES',
                     galleryCtaButton: '👉 ENCONTRAR CONTACTOS AHORA',
                     galleryNote: 'Estas mujeres buscan actualmente parejas en tu región',
-                    testimonial1: '"¡Finalmente una plataforma que funciona! Después de 3 días tuve mi primera cita."',
+                    testimonial1: '"¡Finalmente una plataformaque funciona! Después de 3 días tuve mi primera cita."',
                     testimonialAuthor1: '- Marcos, 42, Madrid',
                     testimonial2: '"100% serio y discreto. Conocí a mi actual novia aquí."',
                     testimonialAuthor2: '- Tomás, 38, Barcelona',
@@ -1020,6 +1068,14 @@
                 code: 'nl',
                 name: 'Nederlands',
                 shortName: 'NL',
+                badges: {
+                    online: 'ONLINE',
+                    popular: 'POPULAIR',
+                    active: 'ACTIEF',
+                    new: 'NIEUW',
+                    looking: 'ZOEKT',
+                    verified: 'GEVERIFIEERD'
+                },
                 content: {
                     title: 'Vind vandaag nog hete dates | C-Date Partner',
                     description: 'Gratis aanmelding bij C-Date - Vind echte vrouwen bij jou in de buurt voor vrijblijvende avonturen. Geverifieerde profielen, 100% discreet.',
@@ -1051,6 +1107,14 @@
                 code: 'pt',
                 name: 'Português',
                 shortName: 'PT',
+                badges: {
+                    online: 'ONLINE',
+                    popular: 'POPULAR',
+                    active: 'ATIVO',
+                    new: 'NOVO',
+                    looking: 'PROCURA',
+                    verified: 'VERIFICADO'
+                },
                 content: {
                     title: 'Encontre encontros quentes hoje | Parceiro C-Date',
                     description: 'Registo gratuito no C-Date - Encontre mulheres reais perto de si para aventuras sem compromisso. Perfis verificados, 100% discreto.',
@@ -1082,6 +1146,14 @@
                 code: 'no',
                 name: 'Norsk',
                 shortName: 'NO',
+                badges: {
+                    online: 'PÅLOGGET',
+                    popular: 'POPULÆR',
+                    active: 'AKTIV',
+                    new: 'NY',
+                    looking: 'SØKER',
+                    verified: 'VERIFISERT'
+                },
                 content: {
                     title: 'Finn heite møter i dag | C-Date Partner',
                     description: 'Gratis registrering på C-Date - Finn ekte kvinner i nærheten for uforpliktende eventyr. Verifiserte profiler, 100% diskret.',
@@ -1113,6 +1185,14 @@
                 code: 'da',
                 name: 'Dansk',
                 shortName: 'DK',
+                badges: {
+                    online: 'ONLINE',
+                    popular: 'POPULÆR',
+                    active: 'AKTIV',
+                    new: 'NY',
+                    looking: 'SØGER',
+                    verified: 'VERIFICERET'
+                },
                 content: {
                     title: 'Find varme møder i dag | C-Date Partner',
                     description: 'Gratis registrering på C-Date - Find ægte kvinder i nærheden for uforpligtende eventyr. Verificerede profiler, 100% diskret.',
@@ -1144,6 +1224,14 @@
                 code: 'pl',
                 name: 'Polski',
                 shortName: 'PL',
+                badges: {
+                    online: 'ONLINE',
+                    popular: 'POPULARNY',
+                    active: 'AKTYWNY',
+                    new: 'NOWY',
+                    looking: 'SZUKA',
+                    verified: 'ZWERYFIKOWANY'
+                },
                 content: {
                     title: 'Znajdź gorące randki już dziś | Partner C-Date',
                     description: 'Darmowa rejestracja w C-Date - Znajdź prawdziwe kobiety w pobliżu na nieobowiązkowe przygody. Zweryfikowane profile, 100% dyskretnie.',
@@ -1175,7 +1263,7 @@
 
         let currentLang = 'de';
 
-        // ALL IMAGES FROM YOUR LANDING PAGE
+        // All image URLs from the landing page
         const allImages = [
             "https://static.tildacdn.ink/tild3930-6566-4838-a662-653336353531/437659768_1221373418.jpg",
             "https://static.tildacdn.ink/tild3163-3361-4565-b064-613535623538/437516504_1221379354.jpg",
@@ -1208,7 +1296,7 @@
             "https://static.tildacdn.ink/tild3263-6333-4631-a362-363236343538/434843396_1221358241.jpg"
         ];
 
-        // Localized location lists for each language
+        // Location lists for different languages
         const locationLists = {
             'de': ['Berlin', 'Hamburg', 'München', 'Köln', 'Frankfurt', 'Stuttgart', 'Düsseldorf', 'Dortmund', 'Essen', 'Leipzig'],
             'en': ['London', 'New York', 'Berlin', 'Paris', 'Amsterdam', 'Madrid', 'Rome', 'Barcelona', 'Vienna', 'Prague'],
@@ -1222,6 +1310,33 @@
             'da': ['København', 'Aarhus', 'Odense', 'Aalborg', 'Esbjerg', 'Randers', 'Kolding', 'Horsens', 'Vejle', 'Roskilde'],
             'pl': ['Warszawa', 'Kraków', 'Łódź', 'Wrocław', 'Poznań', 'Gdańsk', 'Szczecin', 'Bydgoszcz', 'Lublin', 'Katowice']
         };
+
+        // Get random badge text for current language
+        function getRandomBadgeText() {
+            const lang = languages[currentLang];
+            if (!lang || !lang.badges) {
+                // Fallback to English badges
+                const badges = ['ONLINE', 'POPULAR', 'ACTIVE', 'NEW', 'LOOKING', 'VERIFIED'];
+                return badges[Math.floor(Math.random() * badges.length)];
+            }
+            
+            const badgeKeys = Object.keys(lang.badges);
+            const randomKey = badgeKeys[Math.floor(Math.random() * badgeKeys.length)];
+            return lang.badges[randomKey];
+        }
+
+        // Update all badges on page when language changes
+        function updateAllBadges() {
+            // Update hero gallery badges
+            document.querySelectorAll('.gallery-badge').forEach(badge => {
+                badge.textContent = getRandomBadgeText();
+            });
+            
+            // Update main gallery badges
+            document.querySelectorAll('.gallery-item-badge').forEach(badge => {
+                badge.textContent = getRandomBadgeText();
+            });
+        }
 
         // Safe storage functions with fallback
         function saveToStorage(key, value) {
@@ -1251,38 +1366,38 @@
             }
         }
 
-        // FUNCTION FOR REDIRECT WITH TRACKING
+        // Function for redirecting with tracking
         function redirectToCake() {
             try {
-                // Get saved parameters from storage
+                // Retrieve stored parameters
                 const s1 = getFromStorage('cake_s1') || '';
                 const s2 = getFromStorage('cake_s2') || '';
                 const s3 = getFromStorage('cake_s3') || '';
                 const s4 = getFromStorage('cake_s4') || '';
                 const s5 = getFromStorage('cake_s5') || '';
                 
-                // Create link with tracking parameters
+                // Build tracking URL
                 const cakeLink = `https://inspxtrc.com/?a=16316&c=9925&s1=${encodeURIComponent(s1)}&s2=${encodeURIComponent(s2)}&s3=${encodeURIComponent(s3)}&s4=${encodeURIComponent(s4)}&s5=${encodeURIComponent(s5)}`;
                 
                 console.log('Redirecting to Cake with params:', { s1, s2, s3, s4, s5 });
                 
-                // Save click time for analytics
+                // Save click timestamp for analytics
                 saveToStorage('cake_click_time', Date.now().toString());
                 
                 // Track click event
                 trackEvent('cta_click', { source: 'button_click', lang: currentLang });
                 
-                // Redirect
+                // Perform redirect
                 window.location.href = cakeLink;
             } catch (error) {
                 console.error('Redirect error:', error);
                 trackEvent('redirect_error', { error: error.message });
-                // Fallback: simple link without parameters
+                // Fallback to simple link without parameters
                 window.location.href = 'https://inspxtrc.com/?a=16316&c=9925';
             }
         }
 
-        // Track events
+        // Track events for analytics
         function trackEvent(eventName, data = {}) {
             try {
                 const eventData = {
@@ -1294,28 +1409,28 @@
                 };
                 console.log('Event tracked:', eventData);
                 
-                // Save to storage for later analysis
+                // Store events for later analysis
                 const events = JSON.parse(getFromStorage('cake_events') || '[]');
                 events.push(eventData);
-                if (events.length > 100) events.shift(); // Keep only last 100 events
+                if (events.length > 100) events.shift(); // Keep only recent events
                 saveToStorage('cake_events', JSON.stringify(events));
             } catch (e) {
                 console.warn('Event tracking failed:', e);
             }
         }
 
-        // Initialize everything
+        // Initialize application
         function init() {
             try {
                 trackEvent('page_load');
                 
-                // Detect language
+                // Detect preferred language
                 const browserLang = navigator.language.split('-')[0];
                 const urlParams = new URLSearchParams(window.location.search);
                 const langParam = urlParams.get('lang');
                 const supportedLangs = Object.keys(languages);
                 
-                // Normalize Norwegian variants
+                // Normalize Norwegian language codes
                 const browserLangNormalized = browserLang === 'nb' || browserLang === 'nn' ? 'no' : browserLang;
                 
                 if (langParam && languages[langParam]) {
@@ -1332,14 +1447,14 @@
                 // Initialize language system
                 initLanguageSystem();
                 
-                // Update content
+                // Update page content
                 updateContent(currentLang);
                 
                 // Initialize galleries
                 initHeroGallery();
                 initMainGallery();
                 
-                // Add mobile optimizations
+                // Apply mobile optimizations
                 addMobileOptimizations();
                 
                 // Setup tracking for CTA buttons
@@ -1347,6 +1462,9 @@
                 
                 // Setup gallery interactions
                 setupGalleryInteractions();
+                
+                // Update all badges
+                updateAllBadges();
                 
             } catch (error) {
                 console.error('Initialization error:', error);
@@ -1356,7 +1474,7 @@
             }
         }
 
-        // Language system
+        // Language system initialization
         function initLanguageSystem() {
             try {
                 const languageBtn = document.getElementById('languageBtn');
@@ -1364,10 +1482,10 @@
                 
                 if (!languageBtn || !languageDropdown) return;
                 
-                // Clear dropdown
+                // Clear existing dropdown items
                 languageDropdown.innerHTML = '';
                 
-                // Populate dropdown
+                // Populate dropdown with language options
                 Object.values(languages).forEach(lang => {
                     if (lang.code === currentLang) return;
                     
@@ -1442,17 +1560,20 @@
             
             currentLang = langCode;
             
-            // Update URL
+            // Update URL with language parameter
             const url = new URL(window.location);
             url.searchParams.set('lang', langCode);
             window.history.pushState({}, '', url);
             
-            // Update everything
+            // Update all components
             updateContent(langCode);
             updateLanguageDisplay();
             initLanguageSystem();
             initHeroGallery();
             initMainGallery();
+            
+            // Update badges with new language
+            updateAllBadges();
             
             // Close dropdown
             const languageDropdown = document.getElementById('languageDropdown');
@@ -1463,6 +1584,8 @@
             
             // Update timer with new language
             updateTimer();
+            
+            trackEvent('language_changed', { to: langCode });
         }
 
         function updateContent(langCode) {
@@ -1490,7 +1613,7 @@
                 }
             });
             
-            // Update content elements
+            // Update visible content elements
             const contentElements = {
                 'hero-title': lang.content.heroTitle,
                 'hero-subtitle': lang.content.heroSubtitle,
@@ -1527,7 +1650,7 @@
                 }
             });
             
-            // Update HTML lang attribute
+            // Update HTML language and direction attributes
             document.documentElement.lang = langCode;
             document.documentElement.dir = langCode === 'ar' ? 'rtl' : 'ltr';
         }
@@ -1538,13 +1661,7 @@
             return locations[Math.floor(Math.random() * locations.length)];
         }
 
-        // Get random badge text
-        function getRandomBadgeText() {
-            const badges = ['ONLINE', 'NEW', 'ACTIVE', 'LOOKING', 'VERIFIED', 'POPULAR'];
-            return badges[Math.floor(Math.random() * badges.length)];
-        }
-
-        // Initialize HERO gallery (scroll gallery at top)
+        // Initialize hero gallery (scrolling gallery)
         function initHeroGallery() {
             try {
                 const heroGallery = document.getElementById('heroGallery');
@@ -1552,10 +1669,10 @@
                 
                 heroGallery.innerHTML = '';
                 
-                // Take 8 most attractive images for hero gallery
+                // Select 8 most attractive images for hero gallery
                 const heroImages = allImages.slice(0, 8);
                 
-                // Create duplicate set for infinite scroll effect
+                // Duplicate for seamless infinite scroll
                 const imagesToShow = [...heroImages, ...heroImages];
                 
                 imagesToShow.forEach((image, index) => {
@@ -1580,7 +1697,7 @@
                         </div>
                     `;
                     
-                    // Load image with error handling
+                    // Handle image loading
                     const img = item.querySelector('img');
                     img.addEventListener('load', function() {
                         this.classList.remove('loading');
@@ -1595,7 +1712,7 @@
                         this.style.backgroundColor = '#f0f0f0';
                     });
                     
-                    // Make image clickable - leads to registration WITH TRACKING
+                    // Make image clickable - redirects with tracking
                     item.addEventListener('click', function() {
                         trackEvent('gallery_click', { type: 'hero', index: index % 8 });
                         redirectToCake();
@@ -1618,7 +1735,7 @@
                 
                 galleryGrid.innerHTML = '';
                 
-                // Take images 8-16 for main gallery (different from hero)
+                // Use different images for main gallery
                 const imagesToShow = allImages.slice(8, 16);
                 
                 imagesToShow.forEach((image, index) => {
@@ -1639,7 +1756,7 @@
                         <div class="gallery-item-badge">${badgeText}</div>
                     `;
                     
-                    // Load image with error handling
+                    // Handle image loading
                     const img = item.querySelector('img');
                     img.addEventListener('load', function() {
                         this.classList.remove('loading');
@@ -1654,7 +1771,7 @@
                         this.style.backgroundColor = '#f0f0f0';
                     });
                     
-                    // Make image clickable - leads to registration WITH TRACKING
+                    // Make image clickable - redirects with tracking
                     item.addEventListener('click', function() {
                         trackEvent('gallery_click', { type: 'main', index: index });
                         redirectToCake();
@@ -1671,7 +1788,7 @@
 
         // Setup tracking for CTA buttons
         function setupTracking() {
-            // All CTA buttons get redirect handler with tracking
+            // Configure all CTA buttons
             const ctaButtons = [
                 { id: 'main-cta-button', type: 'main' },
                 { id: 'gallery-cta-button', type: 'gallery' },
@@ -1706,7 +1823,7 @@
                 lastTouchEnd = now;
             }, { passive: false });
             
-            // Add click effects to CTA buttons
+            // Add touch feedback to CTA buttons
             document.querySelectorAll('.cta-button').forEach(button => {
                 button.addEventListener('touchstart', function() {
                     this.style.transform = 'scale(0.98)';
@@ -1717,7 +1834,7 @@
                 });
             });
             
-            // Add click effects to gallery items
+            // Add touch feedback to gallery items
             document.querySelectorAll('.gallery-scroll-item, .gallery-item').forEach(item => {
                 item.addEventListener('touchstart', function() {
                     this.style.transform = 'scale(0.95)';
@@ -1741,7 +1858,7 @@
             }
         });
 
-        // CORRECTED: Fixed timer function
+        // Timer update function
         function updateTimer() {
             const timerElement = document.getElementById('timer');
             if (!timerElement) return;
@@ -1749,17 +1866,16 @@
             const now = new Date();
             const hours = now.getHours();
             
-            // Используем готовый текст из языкового файла, если он есть
             const lang = languages[currentLang];
             if (!lang) return;
             
-            // Если есть готовый текст таймера, используем его для времени 12-18
+            // Use pre-defined timer text for 12-18 hours
             if (lang.content.timer && hours >= 12 && hours < 18) {
                 timerElement.textContent = lang.content.timer;
                 return;
             }
             
-            // Динамические сообщения
+            // Dynamic messages based on time
             let message = '';
             
             if (hours < 12) {
@@ -1780,7 +1896,7 @@
                     default: message = `🕒 Until ${timeString}`;
                 }
             } else if (hours < 18) {
-                // Используем текст из языкового файла
+                // Use language file text
                 message = lang.content.timer || '🕒 Offer valid today';
             } else {
                 switch(currentLang) {
@@ -1801,12 +1917,12 @@
             timerElement.textContent = message;
         }
 
-        // IMPROVED: Gallery interactions
+        // Gallery interaction setup
         function setupGalleryInteractions() {
             const heroGallery = document.querySelector('.gallery-scroll-container');
             if (!heroGallery) return;
             
-            // For desktops
+            // Desktop hover controls
             heroGallery.addEventListener('mouseenter', () => {
                 heroGallery.style.animationPlayState = 'paused';
             });
@@ -1815,7 +1931,7 @@
                 heroGallery.style.animationPlayState = 'running';
             });
             
-            // For mobile devices
+            // Mobile touch controls
             let touchTimeout;
             heroGallery.addEventListener('touchstart', () => {
                 heroGallery.style.animationPlayState = 'paused';
@@ -1826,7 +1942,7 @@
             heroGallery.addEventListener('touchend', () => {
                 touchTimeout = setTimeout(() => {
                     heroGallery.style.animationPlayState = 'running';
-                }, 3000); // Give more time on mobile
+                }, 3000); // Longer pause on mobile
             });
             
             // Resume animation on scroll
@@ -1836,7 +1952,7 @@
             });
         }
 
-        // Preload images function
+        // Preload images for better performance
         function preloadImages(urls) {
             urls.forEach(url => {
                 const img = new Image();
@@ -1844,26 +1960,21 @@
             });
         }
 
-        // Initialize on DOM ready
+        // Initialize when DOM is ready
         document.addEventListener('DOMContentLoaded', () => {
             init();
             updateTimer();
             setInterval(updateTimer, 60000); // Update every minute
             
-            // Randomize badges every 10 seconds for dynamic look
+            // Randomize badges periodically for dynamic appearance
             setInterval(() => {
-                document.querySelectorAll('.gallery-badge').forEach(badge => {
-                    badge.textContent = getRandomBadgeText();
-                });
-                document.querySelectorAll('.gallery-item-badge').forEach(badge => {
-                    badge.textContent = getRandomBadgeText();
-                });
+                updateAllBadges();
             }, 10000);
             
             // Preload critical images
             preloadImages(allImages.slice(0, 4));
             
-            // Handle image loading errors globally
+            // Global image error handling
             document.addEventListener('error', function(e) {
                 if (e.target.tagName === 'IMG') {
                     console.warn('Image failed to load:', e.target.src);
@@ -1873,7 +1984,7 @@
             }, true);
         });
 
-        // Expose some functions for debugging if needed
+        // Debugging utilities
         window.debugCake = {
             getParams: function() {
                 return {
